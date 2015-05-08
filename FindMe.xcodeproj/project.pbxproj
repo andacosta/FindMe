@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8808CD861AFC578900BB37E6 /* userMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8808CD851AFC578900BB37E6 /* userMapViewController.m */; };
 		882432EE1AFC4A85008E03DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 882432ED1AFC4A85008E03DF /* main.m */; };
 		882432F11AFC4A85008E03DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 882432F01AFC4A85008E03DF /* AppDelegate.m */; };
 		882432F41AFC4A85008E03DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882432F31AFC4A85008E03DF /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8808CD841AFC578900BB37E6 /* userMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userMapViewController.h; sourceTree = "<group>"; };
+		8808CD851AFC578900BB37E6 /* userMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userMapViewController.m; sourceTree = "<group>"; };
 		882432E81AFC4A85008E03DF /* FindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882432EC1AFC4A85008E03DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882432ED1AFC4A85008E03DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8808CD831AFC530E00BB37E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				882432F51AFC4A85008E03DF /* Main.storyboard */,
+				882432FA1AFC4A85008E03DF /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		882432DF1AFC4A85008E03DF = {
 			isa = PBXGroup;
 			children = (
@@ -83,11 +95,9 @@
 			children = (
 				882432EF1AFC4A85008E03DF /* AppDelegate.h */,
 				882432F01AFC4A85008E03DF /* AppDelegate.m */,
-				882432F21AFC4A85008E03DF /* ViewController.h */,
-				882432F31AFC4A85008E03DF /* ViewController.m */,
-				882432F51AFC4A85008E03DF /* Main.storyboard */,
+				8863F6351AFC4B32008BA93A /* Controllers */,
+				8808CD831AFC530E00BB37E6 /* Views */,
 				882432F81AFC4A85008E03DF /* Images.xcassets */,
-				882432FA1AFC4A85008E03DF /* LaunchScreen.xib */,
 				882432EB1AFC4A85008E03DF /* Supporting Files */,
 			);
 			path = FindMe;
@@ -119,6 +129,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8863F6351AFC4B32008BA93A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				882432F21AFC4A85008E03DF /* ViewController.h */,
+				882432F31AFC4A85008E03DF /* ViewController.m */,
+				8808CD841AFC578900BB37E6 /* userMapViewController.h */,
+				8808CD851AFC578900BB37E6 /* userMapViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,6 +150,7 @@
 				882432E41AFC4A85008E03DF /* Sources */,
 				882432E51AFC4A85008E03DF /* Frameworks */,
 				882432E61AFC4A85008E03DF /* Resources */,
+				50524F424C454D533F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -214,6 +236,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50524F424C454D533F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		882432E41AFC4A85008E03DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -221,6 +259,7 @@
 			files = (
 				882432F41AFC4A85008E03DF /* ViewController.m in Sources */,
 				882432F11AFC4A85008E03DF /* AppDelegate.m in Sources */,
+				8808CD861AFC578900BB37E6 /* userMapViewController.m in Sources */,
 				882432EE1AFC4A85008E03DF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +319,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -323,7 +362,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -348,6 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FindMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FindMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +457,7 @@
 				8824330D1AFC4A85008E03DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8824330E1AFC4A85008E03DF /* Build configuration list for PBXNativeTarget "FindMeTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +466,7 @@
 				882433101AFC4A85008E03DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

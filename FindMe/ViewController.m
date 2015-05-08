@@ -24,4 +24,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+	if ([_usernameTextBox.text isEqualToString:@"user"] && [_passwordTextBox.text isEqual:@"1234"]) {
+		return YES;
+	} else if ([_usernameTextBox.text isEqualToString:@"admin"] && [_passwordTextBox.text isEqual:@"1234"]) {
+		//[self performSegueWithIdentifier:@"MySegueName" sender:sender];
+		return NO;
+	} else {
+		UIAlertView * loginError = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Usuario o contraseña invalido" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil, nil];
+		[loginError show];
+		return NO;
+	}
+}
+
+-(IBAction)prepareForUserUnwind:(UIStoryboardSegue *)segue {
+	// Custom Administrator segue
+}
+
+// Hide keyboard
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
 @end
