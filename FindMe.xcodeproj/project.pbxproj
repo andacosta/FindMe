@@ -15,6 +15,7 @@
 		882432F91AFC4A85008E03DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882432F81AFC4A85008E03DF /* Images.xcassets */; };
 		882432FC1AFC4A85008E03DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882432FA1AFC4A85008E03DF /* LaunchScreen.xib */; };
 		882433081AFC4A85008E03DF /* FindMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 882433071AFC4A85008E03DF /* FindMeTests.m */; };
+		8879029B1AFC6F100020941F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8879029A1AFC6F100020941F /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		882433011AFC4A85008E03DF /* FindMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		882433061AFC4A85008E03DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882433071AFC4A85008E03DF /* FindMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindMeTests.m; sourceTree = "<group>"; };
+		8879029A1AFC6F100020941F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8879029B1AFC6F100020941F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +78,7 @@
 		882432DF1AFC4A85008E03DF = {
 			isa = PBXGroup;
 			children = (
+				8879029A1AFC6F100020941F /* MapKit.framework */,
 				882432EA1AFC4A85008E03DF /* FindMe */,
 				882433041AFC4A85008E03DF /* FindMeTests */,
 				882432E91AFC4A85008E03DF /* Products */,

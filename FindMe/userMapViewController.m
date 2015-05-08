@@ -14,6 +14,8 @@
 
 @implementation userMapViewController
 
+@synthesize mapView = _mapView;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

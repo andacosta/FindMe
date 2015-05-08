@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5D3762A4-2AC7-4848-B63E-0CDF22FD64CF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FindMe</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>31F6EC9DCB0534223DBDC27BB622CD746C6A6362</key>
+		<string>https://github.com/andacosta/FindMe.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FindMe.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>31F6EC9DCB0534223DBDC27BB622CD746C6A6362</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/andacosta/FindMe.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>31F6EC9DCB0534223DBDC27BB622CD746C6A6362</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>31F6EC9DCB0534223DBDC27BB622CD746C6A6362</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FindMe</string>
+		</dict>
+	</array>
+</dict>
+</plist>

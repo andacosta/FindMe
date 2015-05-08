@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface userMapViewController : UIViewController
+@interface userMapViewController : UIViewController {
+	MKMapView * userMapView;
+}
 
 - (IBAction)closeUserSesionButton:(id)sender;
+
+@property (strong, nonatomic) IBOutlet MKMapView * mapView;
 
 @end
