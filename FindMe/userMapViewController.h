@@ -8,14 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "Pin.h"
 
-@interface userMapViewController : UIViewController {
-	MKMapView * userMapView;
-}
+@interface userMapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
 - (IBAction)showNotificationAction:(id)sender;
 - (IBAction)closeUserSesionButton:(id)sender;
 
 @property (strong, nonatomic) IBOutlet MKMapView * mapView;
+@property CLLocationManager * locationManager;
+@property Pin* pins;
+@property MKPolyline* polyline;
+
+- (IBAction)sendRoute:(id)sender;
+
 
 @end

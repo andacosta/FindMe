@@ -24,16 +24,79 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-	
-	/*
-	UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-	localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:0];
-	localNotification.alertBody = @"Local Notification in iOS8";
-	localNotification.timeZone = [NSTimeZone defaultTimeZone];
-	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-	 */
+    _mapView.delegate = self;
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    [_locationManager requestAlwaysAuthorization];
+    [_mapView setShowsUserLocation:YES];
+    
+    _pins = [[Pin alloc] init];
+    
+    // add a long press gesture
+    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(addPin:)];
+    recognizer.minimumPressDuration = 0.2;
+    [self.mapView addGestureRecognizer:recognizer];
 }
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
+    MKCoordinateRegion zonaZoom = MKCoordinateRegionMakeWithDistance([userLocation coordinate], 300, 300);
+    [_mapView setRegion:zonaZoom animated:YES];
+}
+
+- (void)addPin:(UIGestureRecognizer *)recognizer {
+    
+    if (recognizer.state != UIGestureRecognizerStateBegan) {
+        return;
+    }
+    
+    // convert touched position to map coordinate
+    CGPoint userTouch = [recognizer locationInView:self.mapView];
+    
+    CLLocationCoordinate2D mapPoint = [self.mapView convertPoint:userTouch toCoordinateFromView:self.mapView];
+    
+    [_pins addCoordinate:mapPoint];
+    
+    MKPointAnnotation *pointPin = [[MKPointAnnotation alloc] init];
+    pointPin.coordinate = mapPoint;
+    
+    [self.mapView addAnnotation:pointPin];
+    
+    
+    
+    //[self.mapView addAnnotation:_pins.coordinates[0]];
+    
+    /*
+    // and add it to our view
+    Pin *newPin = [[Pin alloc]initWithCoordinate:mapPoint];
+    [self.mapView addAnnotation:newPin];
+    */
+    
+}
+
+- (IBAction)sendRoute:(id)sender {
+    /*for (NSInteger i=0; i < [_pins.coordinates count]; i++) {
+        [self.mapView addAnnotation:_pins.coordinates[i]];
+    }*/
+    
+    if([_pins.coordinates count]>1){
+        _polyline = [MKPolyline polylineWithCoordinates:(__bridge CLLocationCoordinate2D *)([_pins coordinates]) count:[[_pins coordinates] count]];
+        
+        free((__bridge void *)(_pins.coordinates));
+        
+        [self.mapView addOverlay:_polyline];
+    }
+    
+}
+
+-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
+    
+    MKPolylineRenderer* lineView = [[MKPolylineRenderer alloc] initWithPolyline:_polyline];
+    lineView.strokeColor = [UIColor blueColor];
+    lineView.lineWidth = 7;
+    
+    return lineView;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -79,5 +142,7 @@
 	
 	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
+
+
 
 @end
