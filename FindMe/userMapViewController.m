@@ -34,7 +34,7 @@
     
     // add a long press gesture
     UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(addPin:)];
-    recognizer.minimumPressDuration = 0.1;
+    recognizer.minimumPressDuration = 0.05;
     [self.mapView addGestureRecognizer:recognizer];
 }
 
@@ -78,23 +78,18 @@
         [self.mapView addAnnotation:_pins.coordinates[i]];
     }*/
     
-    if([_pins.coordinates count]>1){
+    //if([_pins.coordinates count]>1){
         _polyline = [MKPolyline polylineWithCoordinates:(__bridge CLLocationCoordinate2D *)([_pins coordinates]) count:[[_pins coordinates] count]];
         
         free((__bridge void *)(_pins.coordinates));
         
         [self.mapView addOverlay:_polyline];
-    }
+    //}
     
 }
 
-- (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
+- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
     NSLog(@"%@", @"Core location has a position.");
-}
-
-- (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-    NSLog(@"%@", @"Core location can't get a fix.");
 }
 
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
@@ -103,7 +98,6 @@
     MKPolylineRenderer * rutaRender = [[MKPolylineRenderer alloc] initWithPolyline:ruta];
     rutaRender.strokeColor = [UIColor redColor];
     rutaRender.lineWidth = 1;
-    rutaRender.lineDashPattern = [NSArray arrayWithObjects:[NSNumber numberWithInt:10],[NSNumber numberWithInt:20], nil];
     return rutaRender;
 }
 
