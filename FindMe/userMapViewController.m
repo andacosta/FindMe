@@ -15,6 +15,7 @@
 
 @interface userMapViewController ()
 //<SKPSMTPMessageDelegate>
+
 @end
 
 @implementation userMapViewController
@@ -96,37 +97,34 @@
 }
 */
 
+- (IBAction)showNotificationAction:(id)sender {
+	[self setupLocalNotifications:@"Mensaje"];
+}
+
 - (IBAction)closeUserSesionButton:(id)sender {
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
-
-- (void)viewWillAppear:(BOOL)animated {
-	[self setupLocalNotifications];
-}
-
-- (void)setupLocalNotifications {
+- (void)setupLocalNotifications:(NSString*)notyMessage {
 	[[UIApplication sharedApplication] cancelAllLocalNotifications];
 	
 	UILocalNotification *localNotification = [[UILocalNotification alloc] init];
 	
-	// current time plus 10 secs
 	NSDate *now = [NSDate date];
-	NSDate *dateToFire = [now dateByAddingTimeInterval:5];
+	NSDate *dateToFire = [now dateByAddingTimeInterval:2];
 	
-	NSLog(@"now time: %@", now);
-	NSLog(@"fire time: %@", dateToFire);
+	//NSLog(@"now time: %@", now);
+	//NSLog(@"fire time: %@", dateToFire);
  
 	localNotification.fireDate = dateToFire;
-	localNotification.alertBody = @"Time to get up!";
+	localNotification.alertBody = notyMessage;
 	localNotification.soundName = UILocalNotificationDefaultSoundName;
-	localNotification.applicationIconBadgeNumber = 1; // increment
+	//localNotification.applicationIconBadgeNumber = 1; // increment
 	
 	NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
 	localNotification.userInfo = infoDict;
 	
 	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-}*/
+}
 
 @end

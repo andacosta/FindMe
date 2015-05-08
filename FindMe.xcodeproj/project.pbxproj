@@ -21,6 +21,7 @@
 		FA76A16E1AFCEDB600E0F559 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA76A16D1AFCEDB600E0F559 /* CFNetwork.framework */; };
 		FA76A1701AFCEEE900E0F559 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA76A16F1AFCEEE900E0F559 /* CoreLocation.framework */; };
 		FA76A1851AFCF9F200E0F559 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA76A1841AFCF9F200E0F559 /* NotificationCenter.framework */; };
+		FA76A1871AFD181400E0F559 /* homeBg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA76A1861AFD181400E0F559 /* homeBg.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		FA76A17C1AFCF46800E0F559 /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPSMTPMessage.h; sourceTree = "<group>"; };
 		FA76A17D1AFCF46800E0F559 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
 		FA76A1841AFCF9F200E0F559 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		FA76A1861AFD181400E0F559 /* homeBg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = homeBg.jpg; path = ../homeBg.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		882432EA1AFC4A85008E03DF /* FindMe */ = {
 			isa = PBXGroup;
 			children = (
+				FA76A1861AFD181400E0F559 /* homeBg.jpg */,
 				FA76A1831AFCF47600E0F559 /* SKPSMTPMessage */,
 				882432EF1AFC4A85008E03DF /* AppDelegate.h */,
 				882432F01AFC4A85008E03DF /* AppDelegate.m */,
@@ -277,6 +280,7 @@
 				882432F71AFC4A85008E03DF /* Main.storyboard in Resources */,
 				882432FC1AFC4A85008E03DF /* LaunchScreen.xib in Resources */,
 				882432F91AFC4A85008E03DF /* Images.xcassets in Resources */,
+				FA76A1871AFD181400E0F559 /* homeBg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

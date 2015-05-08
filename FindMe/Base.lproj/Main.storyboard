@@ -63,6 +63,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8w-fO-D7G">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Ingresar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -157,25 +158,52 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kBB-cb-KUx">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MC9-M1-VNV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Ruta">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="352" y="550" width="32" height="30"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MC9-M1-VNV" firstAttribute="leading" secondItem="kBB-cb-KUx" secondAttribute="trailing" constant="-48" id="8ia-eg-JLX"/>
+                            <constraint firstItem="MC9-M1-VNV" firstAttribute="top" secondItem="kBB-cb-KUx" secondAttribute="bottom" constant="-50" id="IMU-Ev-XlX"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="kBB-cb-KUx"/>
+                                <exclude reference="MC9-M1-VNV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8ia-eg-JLX"/>
+                                <exclude reference="IMU-Ev-XlX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="kBB-cb-KUx"/>
+                                <include reference="MC9-M1-VNV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8ia-eg-JLX"/>
+                                <include reference="IMU-Ev-XlX"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="WXK-z6-D3A">
-                        <barButtonItem key="leftBarButtonItem" title="Email" id="fXF-LM-hxL"/>
+                        <barButtonItem key="leftBarButtonItem" title="Noty" id="fXF-LM-hxL">
+                            <connections>
+                                <action selector="showNotificationAction:" destination="JeT-gm-prG" id="vdP-hX-5NG"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Cerrar sesion" id="GFp-bZ-dVl">
                             <connections>
                                 <action selector="closeUserSesionButton:" destination="JeT-gm-prG" id="r32-cB-oSw"/>
