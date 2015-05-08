@@ -183,7 +183,7 @@
 	localNotification.fireDate = dateToFire;
 	localNotification.alertBody = notyMessage;
 	localNotification.soundName = UILocalNotificationDefaultSoundName;
-	//localNotification.applicationIconBadgeNumber = 1; // increment
+	localNotification.applicationIconBadgeNumber = 1;
 	
 	NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
 	localNotification.userInfo = infoDict;

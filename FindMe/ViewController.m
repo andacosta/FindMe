@@ -32,7 +32,7 @@
 	if ([_usernameTextBox.text isEqualToString:@"user"] && [_passwordTextBox.text isEqual:@"1234"]) {
 		return YES;
 	} else if ([_usernameTextBox.text isEqualToString:@"admin"] && [_passwordTextBox.text isEqual:@"1234"]) {
-		//[self performSegueWithIdentifier:@"MySegueName" sender:sender];
+		//[self performSegueWithIdentifier:@"prepareForUserUnwind" sender:sender];
 		return NO;
 	} else {
 		UIAlertView * loginError = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Usuario o contraseña invalido" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles:nil, nil];

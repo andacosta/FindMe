@@ -24,6 +24,11 @@
 		FA76A1871AFD181400E0F559 /* homeBg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA76A1861AFD181400E0F559 /* homeBg.jpg */; };
 		FA76A1891AFD1F8A00E0F559 /* homeBg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA76A1881AFD1F8A00E0F559 /* homeBg2.jpg */; };
 		FA76A18B1AFD209A00E0F559 /* homeBg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA76A18A1AFD209A00E0F559 /* homeBg3.jpg */; };
+		FABDA8FB1AFD41C700FF4B72 /* AdminHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABDA8FA1AFD41C700FF4B72 /* AdminHomeViewController.m */; };
+		FABDA9051AFD462F00FF4B72 /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = FABDA9021AFD462F00FF4B72 /* Facebook.png */; };
+		FABDA9061AFD462F00FF4B72 /* Google+.png in Resources */ = {isa = PBXBuildFile; fileRef = FABDA9031AFD462F00FF4B72 /* Google+.png */; };
+		FABDA9071AFD462F00FF4B72 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = FABDA9041AFD462F00FF4B72 /* Twitter.png */; };
+		FABDA9091AFD4ABE00FF4B72 /* loginBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = FABDA9081AFD4ABE00FF4B72 /* loginBtn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,12 @@
 		FA76A1861AFD181400E0F559 /* homeBg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = homeBg.jpg; path = ../homeBg.jpg; sourceTree = "<group>"; };
 		FA76A1881AFD1F8A00E0F559 /* homeBg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = homeBg2.jpg; sourceTree = "<group>"; };
 		FA76A18A1AFD209A00E0F559 /* homeBg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = homeBg3.jpg; sourceTree = "<group>"; };
+		FABDA8F91AFD41C700FF4B72 /* AdminHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminHomeViewController.h; sourceTree = "<group>"; };
+		FABDA8FA1AFD41C700FF4B72 /* AdminHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminHomeViewController.m; sourceTree = "<group>"; };
+		FABDA9021AFD462F00FF4B72 /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook.png; sourceTree = "<group>"; };
+		FABDA9031AFD462F00FF4B72 /* Google+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google+.png"; sourceTree = "<group>"; };
+		FABDA9041AFD462F00FF4B72 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
+		FABDA9081AFD4ABE00FF4B72 /* loginBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBtn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,9 +143,7 @@
 		882432EA1AFC4A85008E03DF /* FindMe */ = {
 			isa = PBXGroup;
 			children = (
-				FA76A18A1AFD209A00E0F559 /* homeBg3.jpg */,
-				FA76A1881AFD1F8A00E0F559 /* homeBg2.jpg */,
-				FA76A1861AFD181400E0F559 /* homeBg.jpg */,
+				FABDA90A1AFD4FD200FF4B72 /* Images */,
 				FA76A1831AFCF47600E0F559 /* SKPSMTPMessage */,
 				882432EF1AFC4A85008E03DF /* AppDelegate.h */,
 				882432F01AFC4A85008E03DF /* AppDelegate.m */,
@@ -181,6 +190,8 @@
 				8808CD851AFC578900BB37E6 /* userMapViewController.m */,
 				F79654851AFD067700FF895D /* Pin.h */,
 				F79654861AFD067700FF895D /* Pin.m */,
+				FABDA8F91AFD41C700FF4B72 /* AdminHomeViewController.h */,
+				FABDA8FA1AFD41C700FF4B72 /* AdminHomeViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +211,20 @@
 				FA76A17D1AFCF46800E0F559 /* SKPSMTPMessage.m */,
 			);
 			name = SKPSMTPMessage;
+			sourceTree = "<group>";
+		};
+		FABDA90A1AFD4FD200FF4B72 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FABDA9081AFD4ABE00FF4B72 /* loginBtn.png */,
+				FABDA9021AFD462F00FF4B72 /* Facebook.png */,
+				FABDA9031AFD462F00FF4B72 /* Google+.png */,
+				FABDA9041AFD462F00FF4B72 /* Twitter.png */,
+				FA76A18A1AFD209A00E0F559 /* homeBg3.jpg */,
+				FA76A1881AFD1F8A00E0F559 /* homeBg2.jpg */,
+				FA76A1861AFD181400E0F559 /* homeBg.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,9 +310,13 @@
 			files = (
 				882432F71AFC4A85008E03DF /* Main.storyboard in Resources */,
 				FA76A1891AFD1F8A00E0F559 /* homeBg2.jpg in Resources */,
+				FABDA9051AFD462F00FF4B72 /* Facebook.png in Resources */,
 				882432FC1AFC4A85008E03DF /* LaunchScreen.xib in Resources */,
 				882432F91AFC4A85008E03DF /* Images.xcassets in Resources */,
 				FA76A1871AFD181400E0F559 /* homeBg.jpg in Resources */,
+				FABDA9091AFD4ABE00FF4B72 /* loginBtn.png in Resources */,
+				FABDA9071AFD462F00FF4B72 /* Twitter.png in Resources */,
+				FABDA9061AFD462F00FF4B72 /* Google+.png in Resources */,
 				FA76A18B1AFD209A00E0F559 /* homeBg3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +354,7 @@
 				882432F41AFC4A85008E03DF /* ViewController.m in Sources */,
 				882432F11AFC4A85008E03DF /* AppDelegate.m in Sources */,
 				8808CD861AFC578900BB37E6 /* userMapViewController.m in Sources */,
+				FABDA8FB1AFD41C700FF4B72 /* AdminHomeViewController.m in Sources */,
 				F79654871AFD067700FF895D /* Pin.m in Sources */,
 				882432EE1AFC4A85008E03DF /* main.m in Sources */,
 			);
