@@ -9,10 +9,10 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +29,6 @@
 }
 
 -(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    return YES;
 	if ([_usernameTextBox.text isEqualToString:@"user"] && [_passwordTextBox.text isEqual:@"1234"]) {
 		return YES;
 	} else if ([_usernameTextBox.text isEqualToString:@"admin"] && [_passwordTextBox.text isEqual:@"1234"]) {
