@@ -21,6 +21,8 @@
 		FA76A1701AFCEEE900E0F559 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA76A16F1AFCEEE900E0F559 /* CoreLocation.framework */; };
 		FA76A1851AFCF9F200E0F559 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA76A1841AFCF9F200E0F559 /* NotificationCenter.framework */; };
 		FA76A1871AFD181400E0F559 /* homeBg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA76A1861AFD181400E0F559 /* homeBg.jpg */; };
+		FA76A1891AFD1F8A00E0F559 /* homeBg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA76A1881AFD1F8A00E0F559 /* homeBg2.jpg */; };
+		FA76A18B1AFD209A00E0F559 /* homeBg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA76A18A1AFD209A00E0F559 /* homeBg3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		FA76A17D1AFCF46800E0F559 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
 		FA76A1841AFCF9F200E0F559 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		FA76A1861AFD181400E0F559 /* homeBg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = homeBg.jpg; path = ../homeBg.jpg; sourceTree = "<group>"; };
+		FA76A1881AFD1F8A00E0F559 /* homeBg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = homeBg2.jpg; sourceTree = "<group>"; };
+		FA76A18A1AFD209A00E0F559 /* homeBg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = homeBg3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 		882432EA1AFC4A85008E03DF /* FindMe */ = {
 			isa = PBXGroup;
 			children = (
+				FA76A18A1AFD209A00E0F559 /* homeBg3.jpg */,
+				FA76A1881AFD1F8A00E0F559 /* homeBg2.jpg */,
 				FA76A1861AFD181400E0F559 /* homeBg.jpg */,
 				FA76A1831AFCF47600E0F559 /* SKPSMTPMessage */,
 				882432EF1AFC4A85008E03DF /* AppDelegate.h */,
@@ -273,9 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				882432F71AFC4A85008E03DF /* Main.storyboard in Resources */,
+				FA76A1891AFD1F8A00E0F559 /* homeBg2.jpg in Resources */,
 				882432FC1AFC4A85008E03DF /* LaunchScreen.xib in Resources */,
 				882432F91AFC4A85008E03DF /* Images.xcassets in Resources */,
 				FA76A1871AFD181400E0F559 /* homeBg.jpg in Resources */,
+				FA76A18B1AFD209A00E0F559 /* homeBg3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

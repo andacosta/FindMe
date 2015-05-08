@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+	
+	//self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"homeBg3.jpg"]];
+	/*UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homeBg3.jpg"]];
+	[self.view addSubview:backgroundView];*/
 }
 
 - (void)didReceiveMemoryWarning {
