@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -120,17 +121,17 @@
                                 <exclude reference="v8w-fO-D7G"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="7aA-ub-p8c"/>
-                                <exclude reference="G1E-TS-tyy"/>
-                                <exclude reference="ppa-iK-az3"/>
-                                <exclude reference="rRW-JF-den"/>
-                                <exclude reference="xE9-HM-1M1"/>
                                 <exclude reference="d9M-aA-YrZ"/>
                                 <exclude reference="suU-K4-o0N"/>
                                 <exclude reference="wNg-Ya-bUr"/>
+                                <exclude reference="ppa-iK-az3"/>
+                                <exclude reference="rRW-JF-den"/>
+                                <exclude reference="xE9-HM-1M1"/>
                                 <exclude reference="8fh-do-8zJ"/>
                                 <exclude reference="lQq-MP-a21"/>
                                 <exclude reference="xLF-U2-KZz"/>
+                                <exclude reference="7aA-ub-p8c"/>
+                                <exclude reference="G1E-TS-tyy"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -141,17 +142,17 @@
                                 <include reference="v8w-fO-D7G"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="7aA-ub-p8c"/>
-                                <include reference="G1E-TS-tyy"/>
-                                <include reference="ppa-iK-az3"/>
-                                <include reference="rRW-JF-den"/>
-                                <include reference="xE9-HM-1M1"/>
                                 <include reference="d9M-aA-YrZ"/>
                                 <include reference="suU-K4-o0N"/>
                                 <include reference="wNg-Ya-bUr"/>
+                                <include reference="ppa-iK-az3"/>
+                                <include reference="rRW-JF-den"/>
+                                <include reference="xE9-HM-1M1"/>
                                 <include reference="8fh-do-8zJ"/>
                                 <include reference="lQq-MP-a21"/>
                                 <include reference="xLF-U2-KZz"/>
+                                <include reference="7aA-ub-p8c"/>
+                                <include reference="G1E-TS-tyy"/>
                             </mask>
                         </variation>
                     </view>
@@ -193,45 +194,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBg3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-bv-9eO">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="536"/>
+                                </variation>
+                            </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kBB-cb-KUx">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MC9-M1-VNV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Ruta">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="352" y="550" width="32" height="30"/>
-                                </variation>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.79685667370000002" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="MC9-M1-VNV" firstAttribute="leading" secondItem="kBB-cb-KUx" secondAttribute="trailing" constant="-48" id="8ia-eg-JLX"/>
-                            <constraint firstItem="MC9-M1-VNV" firstAttribute="top" secondItem="kBB-cb-KUx" secondAttribute="bottom" constant="-50" id="IMU-Ev-XlX"/>
+                            <constraint firstItem="TYz-Bh-0hL" firstAttribute="top" secondItem="MC9-M1-VNV" secondAttribute="bottom" constant="20" id="4Yw-xh-you"/>
+                            <constraint firstItem="TYz-Bh-0hL" firstAttribute="top" secondItem="kBB-cb-KUx" secondAttribute="bottom" constant="8" id="8Zn-1U-gVf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kBB-cb-KUx" secondAttribute="trailing" constant="-9" id="BkU-jj-dmv"/>
+                            <constraint firstItem="kBB-cb-KUx" firstAttribute="leading" secondItem="kae-79-g74" secondAttribute="leadingMargin" constant="-9" id="Wc4-p0-maG"/>
+                            <constraint firstItem="kBB-cb-KUx" firstAttribute="top" secondItem="O56-Zp-YDB" secondAttribute="bottom" constant="8" id="cki-Dl-yaE"/>
+                            <constraint firstItem="MC9-M1-VNV" firstAttribute="trailing" secondItem="kae-79-g74" secondAttribute="trailingMargin" id="jS0-iw-XIF"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="D4I-bv-9eO"/>
                                 <exclude reference="kBB-cb-KUx"/>
                                 <exclude reference="MC9-M1-VNV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8ia-eg-JLX"/>
-                                <exclude reference="IMU-Ev-XlX"/>
+                                <exclude reference="BkU-jj-dmv"/>
+                                <exclude reference="Wc4-p0-maG"/>
+                                <exclude reference="cki-Dl-yaE"/>
+                                <exclude reference="4Yw-xh-you"/>
+                                <exclude reference="8Zn-1U-gVf"/>
+                                <exclude reference="jS0-iw-XIF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="D4I-bv-9eO"/>
                                 <include reference="kBB-cb-KUx"/>
                                 <include reference="MC9-M1-VNV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8ia-eg-JLX"/>
-                                <include reference="IMU-Ev-XlX"/>
+                                <include reference="BkU-jj-dmv"/>
+                                <include reference="Wc4-p0-maG"/>
+                                <include reference="cki-Dl-yaE"/>
+                                <include reference="4Yw-xh-you"/>
+                                <include reference="8Zn-1U-gVf"/>
+                                <include reference="jS0-iw-XIF"/>
                             </mask>
                         </variation>
                     </view>
