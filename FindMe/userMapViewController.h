@@ -22,5 +22,7 @@
 @property Pin* pins;
 @property MKPolyline* polyline;
 
+@property BOOL* flag;
+
 
 @end

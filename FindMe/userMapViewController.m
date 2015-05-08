@@ -30,6 +30,8 @@
     [_locationManager requestAlwaysAuthorization];
     [_locationManager startUpdatingLocation];
     
+    _flag = false;
+    
     [_mapView setShowsUserLocation:YES];
     
     _pins = [[Pin alloc] init];
@@ -96,16 +98,22 @@
     //if ([_pins.coordinates count] >0 ) {
     
     if (_pins.coordinates.count>0) {
+        
+        //[self setupLocalNotifications:@"Advertencia se esta alejando de su ruta común"];
+        
         CLLocation *loc = [locations lastObject];
         CLLocation *nearPoint = _pins.coordinates.firstObject;
         
-        if (
-            ((nearPoint.coordinate.latitude - loc.coordinate.latitude) > 0.000200) ||
-            ((nearPoint.coordinate.latitude - loc.coordinate.latitude) < -0.000200) ||
-            ((nearPoint.coordinate.longitude - loc.coordinate.longitude) > 0.000200) ||
-            ((nearPoint.coordinate.longitude - loc.coordinate.longitude) < -0.000200)
-                                        ) {
-            [self setupLocalNotifications:@"Advertencia se esta alejando de su ruta común"];
+        if(_flag == false){
+            if (
+                ((nearPoint.coordinate.latitude - loc.coordinate.latitude) > 0.000200) ||
+                ((nearPoint.coordinate.latitude - loc.coordinate.latitude) < -0.000200) ||
+                ((nearPoint.coordinate.longitude - loc.coordinate.longitude) > 0.000200) ||
+                ((nearPoint.coordinate.longitude - loc.coordinate.longitude) < -0.000200)
+                ) {
+                [self setupLocalNotifications:@"Advertencia se esta alejando de su ruta común"];
+                _flag = true;
+            }
         }
         
         NSLog(@"%f", (nearPoint.coordinate.latitude - loc.coordinate.latitude));
