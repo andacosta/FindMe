@@ -15,13 +15,12 @@
 
 - (IBAction)showNotificationAction:(id)sender;
 - (IBAction)closeUserSesionButton:(id)sender;
+- (IBAction)sendRoute:(id)sender;
 
 @property (strong, nonatomic) IBOutlet MKMapView * mapView;
 @property CLLocationManager * locationManager;
 @property Pin* pins;
 @property MKPolyline* polyline;
-
-- (IBAction)sendRoute:(id)sender;
 
 
 @end

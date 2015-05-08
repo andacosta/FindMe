@@ -131,6 +131,9 @@
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)sendRouteB:(id)sender {
+}
+
 - (void)setupLocalNotifications:(NSString*)notyMessage {
 	[[UIApplication sharedApplication] cancelAllLocalNotifications];
 	
