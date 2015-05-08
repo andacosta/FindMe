@@ -28,6 +28,8 @@
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
     [_locationManager requestAlwaysAuthorization];
+    [_locationManager startUpdatingLocation];
+    
     [_mapView setShowsUserLocation:YES];
     
     _pins = [[Pin alloc] init];
@@ -91,8 +93,40 @@
 }
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
-    NSLog(@"%@", @"Core location has a position.");
+    //if ([_pins.coordinates count] >0 ) {
+    
+    if (_pins.coordinates.count>0) {
+        CLLocation *loc = [locations lastObject];
+        CLLocation *nearPoint = _pins.coordinates.firstObject;
+        
+        if (
+            ((nearPoint.coordinate.latitude - loc.coordinate.latitude) > 0.000200) ||
+            ((nearPoint.coordinate.latitude - loc.coordinate.latitude) < -0.000200) ||
+            ((nearPoint.coordinate.longitude - loc.coordinate.longitude) > 0.000200) ||
+            ((nearPoint.coordinate.longitude - loc.coordinate.longitude) < -0.000200)
+                                        ) {
+            [self setupLocalNotifications:@"Advertencia se esta alejando de su ruta común"];
+        }
+        
+        NSLog(@"%f", (nearPoint.coordinate.latitude - loc.coordinate.latitude));
+        
+        
+    }
+    
+    
+    
+    
+    
+    //}
+    
+    
 }
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+}
+
 
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
     
