@@ -16,6 +16,7 @@
 		882432FC1AFC4A85008E03DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882432FA1AFC4A85008E03DF /* LaunchScreen.xib */; };
 		882433081AFC4A85008E03DF /* FindMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 882433071AFC4A85008E03DF /* FindMeTests.m */; };
 		8879029B1AFC6F100020941F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8879029A1AFC6F100020941F /* MapKit.framework */; };
+		8879029D1AFC7DE90020941F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8879029C1AFC7DE90020941F /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		882433061AFC4A85008E03DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882433071AFC4A85008E03DF /* FindMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindMeTests.m; sourceTree = "<group>"; };
 		8879029A1AFC6F100020941F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8879029C1AFC7DE90020941F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8879029D1AFC7DE90020941F /* MessageUI.framework in Frameworks */,
 				8879029B1AFC6F100020941F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +81,7 @@
 		882432DF1AFC4A85008E03DF = {
 			isa = PBXGroup;
 			children = (
+				8879029C1AFC7DE90020941F /* MessageUI.framework */,
 				8879029A1AFC6F100020941F /* MapKit.framework */,
 				882432EA1AFC4A85008E03DF /* FindMe */,
 				882433041AFC4A85008E03DF /* FindMeTests */,

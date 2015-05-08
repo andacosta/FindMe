@@ -39,4 +39,16 @@
 - (IBAction)closeUserSesionButton:(id)sender {
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+
+
+// Notifications
+-(void)sendSMS {
+	
+}
+
+
+
+
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <MessageUI/MFMessageComposeViewController.h>
 
 @interface userMapViewController : UIViewController {
 	MKMapView * userMapView;
