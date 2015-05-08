@@ -24,6 +24,7 @@
     [_coordinates addObject:pointPin];
     
     
+    
     /*
     self = [super init];
     if (self) {
@@ -33,4 +34,5 @@
     }
     return self;*/
 }
+
 @end

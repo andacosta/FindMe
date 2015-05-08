@@ -56,17 +56,10 @@
     
     [_pins addCoordinate:mapPoint];
     
-    for (NSInteger i=0; i < [_pins.coordinates count]; i++) {
-      [self.mapView addAnnotation:_pins.coordinates[i]];
-    }
+    MKPointAnnotation *pointPin = [[MKPointAnnotation alloc] init];
+    pointPin.coordinate = mapPoint;
     
-    if([_pins.coordinates count]>1){
-        MKPolyline *polyline = [MKPolyline polylineWithCoordinates:(__bridge CLLocationCoordinate2D *)([_pins coordinates]) count:[[_pins coordinates] count]];
-        
-        free((__bridge void *)(_pins.coordinates));
-        
-        [self.mapView addOverlay:polyline];
-    }
+    [self.mapView addAnnotation:pointPin];
     
     
     
@@ -80,6 +73,29 @@
     
 }
 
+- (IBAction)sendRoute:(id)sender {
+    /*for (NSInteger i=0; i < [_pins.coordinates count]; i++) {
+        [self.mapView addAnnotation:_pins.coordinates[i]];
+    }*/
+    
+    if([_pins.coordinates count]>1){
+        _polyline = [MKPolyline polylineWithCoordinates:(__bridge CLLocationCoordinate2D *)([_pins coordinates]) count:[[_pins coordinates] count]];
+        
+        free((__bridge void *)(_pins.coordinates));
+        
+        [self.mapView addOverlay:_polyline];
+    }
+    
+}
+
+-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
+    
+    MKPolylineRenderer* lineView = [[MKPolylineRenderer alloc] initWithPolyline:_polyline];
+    lineView.strokeColor = [UIColor blueColor];
+    lineView.lineWidth = 7;
+    
+    return lineView;
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -126,5 +142,7 @@
 	
 	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
+
+
 
 @end

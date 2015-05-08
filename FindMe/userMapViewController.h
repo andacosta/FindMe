@@ -19,5 +19,9 @@
 @property (strong, nonatomic) IBOutlet MKMapView * mapView;
 @property CLLocationManager * locationManager;
 @property Pin* pins;
+@property MKPolyline* polyline;
+
+- (IBAction)sendRoute:(id)sender;
+
 
 @end
