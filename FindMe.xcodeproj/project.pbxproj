@@ -17,6 +17,9 @@
 		882433081AFC4A85008E03DF /* FindMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 882433071AFC4A85008E03DF /* FindMeTests.m */; };
 		8879029B1AFC6F100020941F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8879029A1AFC6F100020941F /* MapKit.framework */; };
 		8879029D1AFC7DE90020941F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8879029C1AFC7DE90020941F /* MessageUI.framework */; };
+		FA76A16E1AFCEDB600E0F559 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA76A16D1AFCEDB600E0F559 /* CFNetwork.framework */; };
+		FA76A1701AFCEEE900E0F559 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA76A16F1AFCEEE900E0F559 /* CoreLocation.framework */; };
+		FA76A1851AFCF9F200E0F559 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA76A1841AFCF9F200E0F559 /* NotificationCenter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,19 @@
 		882433071AFC4A85008E03DF /* FindMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindMeTests.m; sourceTree = "<group>"; };
 		8879029A1AFC6F100020941F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8879029C1AFC7DE90020941F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		FA76A16D1AFCEDB600E0F559 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FA76A16F1AFCEEE900E0F559 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FA76A1741AFCF46800E0F559 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		FA76A1751AFCF46800E0F559 /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Transcoder.m; sourceTree = "<group>"; };
+		FA76A1761AFCF46800E0F559 /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
+		FA76A1771AFCF46800E0F559 /* HSK_CFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSK_CFUtilities.m; sourceTree = "<group>"; };
+		FA76A1781AFCF46800E0F559 /* NSData+Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64Additions.h"; sourceTree = "<group>"; };
+		FA76A1791AFCF46800E0F559 /* NSData+Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64Additions.m"; sourceTree = "<group>"; };
+		FA76A17A1AFCF46800E0F559 /* NSStream+SKPSMTPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+SKPSMTPExtensions.h"; sourceTree = "<group>"; };
+		FA76A17B1AFCF46800E0F559 /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
+		FA76A17C1AFCF46800E0F559 /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPSMTPMessage.h; sourceTree = "<group>"; };
+		FA76A17D1AFCF46800E0F559 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
+		FA76A1841AFCF9F200E0F559 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA76A1851AFCF9F200E0F559 /* NotificationCenter.framework in Frameworks */,
+				FA76A1701AFCEEE900E0F559 /* CoreLocation.framework in Frameworks */,
+				FA76A16E1AFCEDB600E0F559 /* CFNetwork.framework in Frameworks */,
 				8879029D1AFC7DE90020941F /* MessageUI.framework in Frameworks */,
 				8879029B1AFC6F100020941F /* MapKit.framework in Frameworks */,
 			);
@@ -81,6 +100,9 @@
 		882432DF1AFC4A85008E03DF = {
 			isa = PBXGroup;
 			children = (
+				FA76A1841AFCF9F200E0F559 /* NotificationCenter.framework */,
+				FA76A16F1AFCEEE900E0F559 /* CoreLocation.framework */,
+				FA76A16D1AFCEDB600E0F559 /* CFNetwork.framework */,
 				8879029C1AFC7DE90020941F /* MessageUI.framework */,
 				8879029A1AFC6F100020941F /* MapKit.framework */,
 				882432EA1AFC4A85008E03DF /* FindMe */,
@@ -101,6 +123,7 @@
 		882432EA1AFC4A85008E03DF /* FindMe */ = {
 			isa = PBXGroup;
 			children = (
+				FA76A1831AFCF47600E0F559 /* SKPSMTPMessage */,
 				882432EF1AFC4A85008E03DF /* AppDelegate.h */,
 				882432F01AFC4A85008E03DF /* AppDelegate.m */,
 				8863F6351AFC4B32008BA93A /* Controllers */,
@@ -146,6 +169,23 @@
 				8808CD851AFC578900BB37E6 /* userMapViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FA76A1831AFCF47600E0F559 /* SKPSMTPMessage */ = {
+			isa = PBXGroup;
+			children = (
+				FA76A1741AFCF46800E0F559 /* Base64Transcoder.h */,
+				FA76A1751AFCF46800E0F559 /* Base64Transcoder.m */,
+				FA76A1761AFCF46800E0F559 /* HSK_CFUtilities.h */,
+				FA76A1771AFCF46800E0F559 /* HSK_CFUtilities.m */,
+				FA76A1781AFCF46800E0F559 /* NSData+Base64Additions.h */,
+				FA76A1791AFCF46800E0F559 /* NSData+Base64Additions.m */,
+				FA76A17A1AFCF46800E0F559 /* NSStream+SKPSMTPExtensions.h */,
+				FA76A17B1AFCF46800E0F559 /* NSStream+SKPSMTPExtensions.m */,
+				FA76A17C1AFCF46800E0F559 /* SKPSMTPMessage.h */,
+				FA76A17D1AFCF46800E0F559 /* SKPSMTPMessage.m */,
+			);
+			name = SKPSMTPMessage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,10 +7,14 @@
 //
 
 #import "userMapViewController.h"
-#import <MessageUI/MessageUI.h>
-#import <MessageUI/MFMessageComposeViewController.h>
+//#import <MessageUI/MessageUI.h>
+//#import <MessageUI/MFMessageComposeViewController.h>
+//#import <CFNetwork/CFNetwork.h>
+//#import "SKPSMTPMessage.h"
+//#import "NSData+Base64Additions.h"
 
-@interface userMapViewController () <MFMailComposeViewControllerDelegate>
+@interface userMapViewController ()
+//<SKPSMTPMessageDelegate>
 
 @end
 
@@ -43,51 +47,31 @@
 }
 
 
-
-
-// Notifications
-- (IBAction)sendEmailAction:(UIButton *)sender
-{
-	if ([MFMailComposeViewController canSendMail])
-	{
-		MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
-		mail.mailComposeDelegate = self;
-		[mail setSubject:@"Sample Subject"];
-		[mail setMessageBody:@"Here is some main text in the email!" isHTML:NO];
-		[mail setToRecipients:@[@"testingEmail@example.com"]];
-		
-		[self presentViewController:mail animated:YES completion:NULL];
-	}
-	else
-	{
-		NSLog(@"This device cannot send email");
-	}
+- (void)viewWillAppear:(BOOL)animated {
+	[self setupLocalNotifications];
 }
 
-- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-{
-	switch (result) {
-		case MFMailComposeResultSent:
-			NSLog(@"You sent the email.");
-			break;
-		case MFMailComposeResultSaved:
-			NSLog(@"You saved a draft of this email");
-			break;
-		case MFMailComposeResultCancelled:
-			NSLog(@"You cancelled sending this email.");
-			break;
-		case MFMailComposeResultFailed:
-			NSLog(@"Mail failed:  An error occurred when trying to compose this email");
-			break;
-		default:
-			NSLog(@"An error occurred when trying to compose this email");
-			break;
-	}
+- (void)setupLocalNotifications {
+	[[UIApplication sharedApplication] cancelAllLocalNotifications];
 	
-	[self dismissViewControllerAnimated:YES completion:NULL];
+	UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+	
+	// current time plus 10 secs
+	NSDate *now = [NSDate date];
+	NSDate *dateToFire = [now dateByAddingTimeInterval:5];
+	
+	NSLog(@"now time: %@", now);
+	NSLog(@"fire time: %@", dateToFire);
+ 
+	localNotification.fireDate = dateToFire;
+	localNotification.alertBody = @"Time to get up!";
+	localNotification.soundName = UILocalNotificationDefaultSoundName;
+	localNotification.applicationIconBadgeNumber = 1; // increment
+	
+	NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:@"Object 1", @"Key 1", @"Object 2", @"Key 2", nil];
+	localNotification.userInfo = infoDict;
+	
+	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
-
-
-
 
 @end

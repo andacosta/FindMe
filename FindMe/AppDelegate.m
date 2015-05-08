@@ -17,7 +17,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    return YES;
+	UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+	
+	if (notification) {
+		[self showAlarm:notification.alertBody];
+		NSLog(@"AppDelegate didFinishLaunchingWithOptions");
+		application.applicationIconBadgeNumber = 0;
+	}
+	
+	[self.window makeKeyAndVisible];
+	return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+	[self showAlarm:notification.alertBody];
+	application.applicationIconBadgeNumber = 0;
+	NSLog(@"AppDelegate didReceiveLocalNotification %@", notification.userInfo);
+}
+
+- (void)showAlarm:(NSString *)text {
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alarm"
+														message:text delegate:nil
+											  cancelButtonTitle:@"OK"
+											  otherButtonTitles:nil];
+	[alertView show];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
