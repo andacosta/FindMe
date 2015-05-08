@@ -78,13 +78,15 @@
         [self.mapView addAnnotation:_pins.coordinates[i]];
     }*/
     
-    //if([_pins.coordinates count]>1){
+    NSLog(@"%s", "hola mundo");
+    
+    if([_pins.coordinates count]>1){
         _polyline = [MKPolyline polylineWithCoordinates:(__bridge CLLocationCoordinate2D *)([_pins coordinates]) count:[[_pins coordinates] count]];
         
         free((__bridge void *)(_pins.coordinates));
         
         [self.mapView addOverlay:_polyline];
-    //}
+    }
     
 }
 
@@ -123,9 +125,6 @@
 
 - (IBAction)closeUserSesionButton:(id)sender {
 	[self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)sendRouteB:(id)sender {
 }
 
 - (void)setupLocalNotifications:(NSString*)notyMessage {
