@@ -13,6 +13,7 @@
 	MKMapView * userMapView;
 }
 
+- (IBAction)showNotificationAction:(id)sender;
 - (IBAction)closeUserSesionButton:(id)sender;
 
 @property (strong, nonatomic) IBOutlet MKMapView * mapView;
