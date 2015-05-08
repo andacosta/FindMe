@@ -264,12 +264,12 @@
                                 <exclude reference="MC9-M1-VNV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="BQv-h1-vtk"/>
-                                <exclude reference="IR5-X0-pwa"/>
-                                <exclude reference="oC6-rY-lb2"/>
                                 <exclude reference="Hfb-7s-IVT"/>
                                 <exclude reference="IrW-Ib-cdb"/>
                                 <exclude reference="ha0-hX-W6A"/>
+                                <exclude reference="BQv-h1-vtk"/>
+                                <exclude reference="IR5-X0-pwa"/>
+                                <exclude reference="oC6-rY-lb2"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -279,12 +279,12 @@
                                 <include reference="MC9-M1-VNV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="BQv-h1-vtk"/>
-                                <include reference="IR5-X0-pwa"/>
-                                <include reference="oC6-rY-lb2"/>
                                 <include reference="Hfb-7s-IVT"/>
                                 <include reference="IrW-Ib-cdb"/>
                                 <include reference="ha0-hX-W6A"/>
+                                <include reference="BQv-h1-vtk"/>
+                                <include reference="IR5-X0-pwa"/>
+                                <include reference="oC6-rY-lb2"/>
                             </mask>
                         </variation>
                     </view>
