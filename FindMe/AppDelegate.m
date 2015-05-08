@@ -17,30 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-	UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
 	
-	if (notification) {
-		[self showAlarm:notification.alertBody];
-		NSLog(@"AppDelegate didFinishLaunchingWithOptions");
-		application.applicationIconBadgeNumber = 0;
-	}
+	// Notification Permisions | Base SDK is iOS 8.0 or later
+	#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+		if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+			[application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+		}
+	#endif
 	
-	[self.window makeKeyAndVisible];
-	return YES;
-}
-
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-	[self showAlarm:notification.alertBody];
-	application.applicationIconBadgeNumber = 0;
-	NSLog(@"AppDelegate didReceiveLocalNotification %@", notification.userInfo);
-}
-
-- (void)showAlarm:(NSString *)text {
-	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alarm"
-														message:text delegate:nil
-											  cancelButtonTitle:@"OK"
-											  otherButtonTitles:nil];
-	[alertView show];
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

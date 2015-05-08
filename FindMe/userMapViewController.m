@@ -25,6 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+	
+	UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+	localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:0];
+	localNotification.alertBody = @"Local Notification in iOS8";
+	localNotification.timeZone = [NSTimeZone defaultTimeZone];
+	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +51,6 @@
 - (IBAction)closeUserSesionButton:(id)sender {
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 - (void)viewWillAppear:(BOOL)animated {
 	[self setupLocalNotifications];
