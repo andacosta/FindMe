@@ -34,7 +34,7 @@
     
     // add a long press gesture
     UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(addPin:)];
-    recognizer.minimumPressDuration = 0.2;
+    recognizer.minimumPressDuration = 0.1;
     [self.mapView addGestureRecognizer:recognizer];
 }
 
