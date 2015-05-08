@@ -90,11 +90,12 @@
 
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
     
-    MKPolylineRenderer* lineView = [[MKPolylineRenderer alloc] initWithPolyline:_polyline];
-    lineView.strokeColor = [UIColor blueColor];
-    lineView.lineWidth = 7;
-    
-    return lineView;
+    MKPolyline * ruta = overlay;
+    MKPolylineRenderer * rutaRender = [[MKPolylineRenderer alloc] initWithPolyline:ruta];
+    rutaRender.strokeColor = [UIColor redColor];
+    rutaRender.lineWidth = 1;
+    rutaRender.lineDashPattern = [NSArray arrayWithObjects:[NSNumber numberWithInt:10],[NSNumber numberWithInt:20], nil];
+    return rutaRender;
 }
 
 
