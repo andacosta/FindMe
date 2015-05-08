@@ -175,7 +175,27 @@
                     <view key="view" contentMode="scaleToFill" id="y39-B8-p6b">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sS1-gd-0T4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="EsS-ZN-CcM"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="sS1-gd-0T4"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="sS1-gd-0T4"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbr-R8-cNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,19 +225,37 @@
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MC9-M1-VNV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.35294117650000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="6JK-D5-xgx"/>
+                                    <constraint firstAttribute="height" constant="40" id="hJu-Sn-CV4"/>
+                                </constraints>
                                 <state key="normal" title="Ruta">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6JK-D5-xgx"/>
+                                        <exclude reference="hJu-Sn-CV4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="6JK-D5-xgx"/>
+                                        <include reference="hJu-Sn-CV4"/>
+                                    </mask>
+                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.79685667370000002" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="TYz-Bh-0hL" firstAttribute="top" secondItem="MC9-M1-VNV" secondAttribute="bottom" constant="20" id="4Yw-xh-you"/>
-                            <constraint firstItem="TYz-Bh-0hL" firstAttribute="top" secondItem="kBB-cb-KUx" secondAttribute="bottom" constant="8" id="8Zn-1U-gVf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kBB-cb-KUx" secondAttribute="trailing" constant="-9" id="BkU-jj-dmv"/>
-                            <constraint firstItem="kBB-cb-KUx" firstAttribute="leading" secondItem="kae-79-g74" secondAttribute="leadingMargin" constant="-9" id="Wc4-p0-maG"/>
-                            <constraint firstItem="kBB-cb-KUx" firstAttribute="top" secondItem="O56-Zp-YDB" secondAttribute="bottom" constant="8" id="cki-Dl-yaE"/>
-                            <constraint firstItem="MC9-M1-VNV" firstAttribute="trailing" secondItem="kae-79-g74" secondAttribute="trailingMargin" id="jS0-iw-XIF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kBB-cb-KUx" secondAttribute="trailing" constant="-9" id="BQv-h1-vtk"/>
+                            <constraint firstItem="TYz-Bh-0hL" firstAttribute="top" secondItem="kBB-cb-KUx" secondAttribute="bottom" constant="8" id="Hfb-7s-IVT"/>
+                            <constraint firstItem="kBB-cb-KUx" firstAttribute="top" secondItem="O56-Zp-YDB" secondAttribute="bottom" constant="8" id="IR5-X0-pwa"/>
+                            <constraint firstItem="MC9-M1-VNV" firstAttribute="leading" secondItem="kBB-cb-KUx" secondAttribute="trailing" constant="-59" id="IrW-Ib-cdb"/>
+                            <constraint firstItem="MC9-M1-VNV" firstAttribute="top" secondItem="kBB-cb-KUx" secondAttribute="bottom" constant="-52" id="ha0-hX-W6A"/>
+                            <constraint firstItem="kBB-cb-KUx" firstAttribute="leading" secondItem="kae-79-g74" secondAttribute="leadingMargin" constant="-9" id="oC6-rY-lb2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -226,12 +264,12 @@
                                 <exclude reference="MC9-M1-VNV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="BkU-jj-dmv"/>
-                                <exclude reference="Wc4-p0-maG"/>
-                                <exclude reference="cki-Dl-yaE"/>
-                                <exclude reference="4Yw-xh-you"/>
-                                <exclude reference="8Zn-1U-gVf"/>
-                                <exclude reference="jS0-iw-XIF"/>
+                                <exclude reference="BQv-h1-vtk"/>
+                                <exclude reference="IR5-X0-pwa"/>
+                                <exclude reference="oC6-rY-lb2"/>
+                                <exclude reference="Hfb-7s-IVT"/>
+                                <exclude reference="IrW-Ib-cdb"/>
+                                <exclude reference="ha0-hX-W6A"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -241,22 +279,22 @@
                                 <include reference="MC9-M1-VNV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="BkU-jj-dmv"/>
-                                <include reference="Wc4-p0-maG"/>
-                                <include reference="cki-Dl-yaE"/>
-                                <include reference="4Yw-xh-you"/>
-                                <include reference="8Zn-1U-gVf"/>
-                                <include reference="jS0-iw-XIF"/>
+                                <include reference="BQv-h1-vtk"/>
+                                <include reference="IR5-X0-pwa"/>
+                                <include reference="oC6-rY-lb2"/>
+                                <include reference="Hfb-7s-IVT"/>
+                                <include reference="IrW-Ib-cdb"/>
+                                <include reference="ha0-hX-W6A"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="WXK-z6-D3A">
-                        <barButtonItem key="leftBarButtonItem" title="Noty" id="fXF-LM-hxL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="fXF-LM-hxL">
                             <connections>
                                 <action selector="showNotificationAction:" destination="JeT-gm-prG" id="vdP-hX-5NG"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Cerrar sesion" id="GFp-bZ-dVl">
+                        <barButtonItem key="rightBarButtonItem" title="Salir" id="GFp-bZ-dVl">
                             <connections>
                                 <action selector="closeUserSesionButton:" destination="JeT-gm-prG" id="r32-cB-oSw"/>
                             </connections>
